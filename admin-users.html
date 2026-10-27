@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Users - Admin Panel</title>
+
+    <link rel="stylesheet" href="css/admin-users.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="sidebar">
+
+    <div class="sidebar-logo">
+
+        <i class="fa-solid fa-shield-halved"></i>
+
+        <span>Admin Panel</span>
+
+    </div>
+
+
+    <nav class="sidebar-menu">
+
+        <a href="admin.html">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>Dashboard</span>
+        </a>
+
+
+        <a href="admin-verification.html">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>Items Verification</span>
+        </a>
+
+
+        <a href="admin-claims.html">
+            <i class="fa-solid fa-hand-holding-heart"></i>
+            <span>Claim Requests</span>
+        </a>
+
+
+        <a href="admin-users.html" class="active">
+            <i class="fa-solid fa-users"></i>
+            <span>Users</span>
+        </a>
+
+
+        <a href="admin-analytics.html">
+            <i class="fa-solid fa-chart-pie"></i>
+            <span>Analytics</span>
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <a href="login.html" class="logout">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            <span>Logout</span>
+
+        </a>
+
+    </div>
+
+</aside>
+
+
+
+<!-- ================= MAIN CONTENT ================= -->
+
+<main class="main-content">
+
+
+    <!-- TOPBAR -->
+
+    <header class="topbar">
+
+        <div>
+
+            <h1>Users</h1>
+
+            <p>Manage registered users of the portal</p>
+
+        </div>
+
+
+        <div class="admin-profile">
+
+            <div class="admin-avatar">
+
+                <i class="fa-solid fa-user-shield"></i>
+
+            </div>
+
+
+            <div>
+
+                <strong>Admin</strong>
+
+                <span>Administrator</span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= STATS ================= -->
+
+    <section class="stats-grid">
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon total">
+
+                <i class="fa-solid fa-users"></i>
+
+            </div>
+
+            <div class="stat-content">
+
+                <span>Total Users</span>
+
+                <h2 id="totalUsers">0</h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+
+                <i class="fa-solid fa-user-plus"></i>
+
+            </div>
+
+            <div class="stat-content">
+
+                <span>Registered Users</span>
+
+                <h2 id="registeredUsers">0</h2>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ================= USERS SECTION ================= -->
+
+    <section class="users-section">
+
+
+        <div class="section-header">
+
+            <div>
+
+                <h2>Registered Users</h2>
+
+                <p>Users who have registered on Campus Lost & Found</p>
+
+            </div>
+
+
+            <div class="user-badge" id="userCount">
+
+                0 Users
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="userSearch"
+                placeholder="Search by name or email..."
+            >
+
+        </div>
+
+
+
+        <!-- TABLE -->
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>#</th>
+
+                        <th>User</th>
+
+                        <th>Email</th>
+
+                        <th>User ID</th>
+
+                        <th>Registered On</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="usersTable">
+
+                    <!-- Users will load here -->
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+
+        <!-- EMPTY STATE -->
+
+        <div class="empty-state" id="emptyState">
+
+            <div class="empty-icon">
+
+                <i class="fa-solid fa-users-slash"></i>
+
+            </div>
+
+            <h3>No Users Found</h3>
+
+            <p>No registered users are available.</p>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- INFO -->
+
+    <section class="info-box">
+
+        <div class="info-icon">
+
+            <i class="fa-solid fa-circle-info"></i>
+
+        </div>
+
+        <div>
+
+            <h3>User Management</h3>
+
+            <p>
+                This section displays users registered on the
+                Smart Campus Lost & Found Management System.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <p>
+            © 2026 Smart Campus Lost & Found Management System
+        </p>
+
+    </footer>
+
+
+</main>
+
+
+
+<script type="module" src="js/admin-users.js"></script>
+
+</body>
+
+</html>
+

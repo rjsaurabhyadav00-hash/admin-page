@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Claim Requests - Admin Panel</title>
+
+<link rel="stylesheet" href="css/admin-claim.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+```
+
+</head>
+
+<body>
+
+```
+<!-- ================= SIDEBAR ================= -->
+<aside class="sidebar">
+
+    <div class="sidebar-logo">
+        <i class="fa-solid fa-shield-halved"></i>
+        <span>Admin Panel</span>
+    </div>
+
+    <nav class="sidebar-menu">
+
+        <a href="admin.html">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>Dashboard</span>
+        </a>
+
+        <a href="admin-verification.html">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>Items Verification</span>
+        </a>
+
+        <a href="admin-claims.html" class="active">
+            <i class="fa-solid fa-hand-holding-heart"></i>
+            <span>Claim Requests</span>
+        </a>
+
+        <a href="admin-users.html">
+            <i class="fa-solid fa-users"></i>
+            <span>Users</span>
+        </a>
+
+        <a href="admin-analytics.html">
+            <i class="fa-solid fa-chart-pie"></i>
+            <span>Analytics</span>
+        </a>
+
+    </nav>
+
+    <div class="sidebar-bottom">
+
+        <a href="login.html" class="logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+        </a>
+
+    </div>
+
+</aside>
+
+
+<!-- ================= MAIN CONTENT ================= -->
+<main class="main-content">
+
+    <!-- TOP BAR -->
+    <header class="topbar">
+
+        <div>
+            <h1>Claim Requests</h1>
+            <p>Review and manage item claim requests</p>
+        </div>
+
+        <div class="admin-profile">
+
+            <div class="admin-avatar">
+                <i class="fa-solid fa-user-shield"></i>
+            </div>
+
+            <div>
+                <strong>Admin</strong>
+                <span>Administrator</span>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= STATISTICS ================= -->
+    <section class="stats-grid">
+
+        <div class="stat-card">
+
+            <div class="stat-icon pending">
+                <i class="fa-solid fa-clock"></i>
+            </div>
+
+            <div class="stat-content">
+                <span>Pending Claims</span>
+                <h2 id="pendingClaims">0</h2>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon approved">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+
+            <div class="stat-content">
+                <span>Approved Claims</span>
+                <h2 id="approvedClaims">0</h2>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon rejected">
+                <i class="fa-solid fa-circle-xmark"></i>
+            </div>
+
+            <div class="stat-content">
+                <span>Rejected Claims</span>
+                <h2 id="rejectedClaims">0</h2>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon total">
+                <i class="fa-solid fa-file-lines"></i>
+            </div>
+
+            <div class="stat-content">
+                <span>Total Requests</span>
+                <h2 id="totalClaimRequests">0</h2>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CLAIM REQUESTS ================= -->
+    <section class="requests-section">
+
+        <div class="section-header">
+
+            <div>
+                <h2>All Claim Requests</h2>
+                <p>Review requests submitted by users</p>
+            </div>
+
+            <div class="request-badge" id="requestCount">
+                0 Requests
+            </div>
+
+        </div>
+
+
+        <!-- CLAIM CARDS -->
+        <div class="claims-container" id="claimsContainer">
+            <!-- Claim cards will be loaded by admin-claims.js -->
+        </div>
+
+
+        <!-- EMPTY STATE -->
+        <div class="empty-state" id="emptyState">
+
+            <div class="empty-icon">
+                <i class="fa-solid fa-inbox"></i>
+            </div>
+
+            <h3>No Claim Requests</h3>
+
+            <p>
+                There are currently no claim requests to review.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= INFO BOX ================= -->
+    <section class="info-box">
+
+        <div class="info-icon">
+            <i class="fa-solid fa-circle-info"></i>
+        </div>
+
+        <div>
+            <h3>Admin Instructions</h3>
+
+            <p>
+                Review each claim request carefully before approving it.
+                Approved claims can be used to identify items that have
+                been successfully claimed by users.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>
+            © 2026 Smart Campus Lost & Found Management System
+        </p>
+    </footer>
+
+</main>
+
+
+<!-- JavaScript -->
+<script type="module" src="js/admin-claims.js"></script>
+```
+
+</body>
+</html>

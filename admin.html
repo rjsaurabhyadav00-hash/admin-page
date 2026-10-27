@@ -1,0 +1,448 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Admin Dashboard | Campus L&F</title>
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Admin CSS -->
+    <link
+        rel="stylesheet"
+        href="css/admin.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- ===============================
+     SIDEBAR
+================================ -->
+
+<aside class="sidebar">
+
+    <div class="logo">
+
+        <div class="logo-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <div>
+            <h2>Campus L&F</h2>
+            <span>Admin Panel</span>
+        </div>
+
+    </div>
+
+
+    <nav class="menu">
+
+        <a
+            href="admin.html"
+            class="active"
+        >
+            <i class="fa-solid fa-chart-line"></i>
+            <span>Dashboard</span>
+        </a>
+
+
+        <a href="admin-verification.html">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <span>Items Verification</span>
+
+        </a>
+
+
+        <a href="admin-claims.html">
+
+            <i class="fa-solid fa-file-circle-check"></i>
+
+            <span>Claim Requests</span>
+
+        </a>
+
+
+        <a href="admin-users.html">
+
+            <i class="fa-solid fa-users"></i>
+
+            <span>Users</span>
+
+        </a>
+
+
+        <a href="admin-analytics.html">
+
+            <i class="fa-solid fa-chart-pie"></i>
+
+            <span>Analytics</span>
+
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <a
+            href="login.html"
+            class="logout"
+        >
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            <span>Logout</span>
+
+        </a>
+
+    </div>
+
+</aside>
+
+
+
+<!-- ===============================
+     MAIN CONTENT
+================================ -->
+
+<main class="main">
+
+
+    <!-- TOP HEADER -->
+
+    <header class="topbar">
+
+        <div>
+
+            <p class="welcome-text">
+                Welcome back, Admin 👋
+            </p>
+
+            <h1>Dashboard</h1>
+
+            <p class="subtitle">
+                Manage your Campus Lost & Found system
+            </p>
+
+        </div>
+
+
+        <div class="admin-profile">
+
+            <div class="admin-avatar">
+                <i class="fa-solid fa-user-shield"></i>
+            </div>
+
+            <div>
+
+                <strong>Administrator</strong>
+
+                <span>System Admin</span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ===============================
+         STATISTICS
+    ================================= -->
+
+    <section class="stats-grid">
+
+
+        <!-- LOST -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon lost-icon">
+                <i class="fa-solid fa-box-open"></i>
+            </div>
+
+            <div class="stat-content">
+
+                <span>Total Lost</span>
+
+                <h2 id="totalLost">
+                    0
+                </h2>
+
+                <small>
+                    Lost item reports
+                </small>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- FOUND -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon found-icon">
+                <i class="fa-solid fa-hand-holding-heart"></i>
+            </div>
+
+            <div class="stat-content">
+
+                <span>Total Found</span>
+
+                <h2 id="totalFound">
+                    0
+                </h2>
+
+                <small>
+                    Found item reports
+                </small>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PENDING -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon pending-icon">
+                <i class="fa-solid fa-clock"></i>
+            </div>
+
+            <div class="stat-content">
+
+                <span>Pending Items</span>
+
+                <h2 id="totalPending">
+                    0
+                </h2>
+
+                <small>
+                    Waiting for verification
+                </small>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CLAIMS -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon claim-icon">
+                <i class="fa-solid fa-file-circle-check"></i>
+            </div>
+
+            <div class="stat-content">
+
+                <span>Claim Requests</span>
+
+                <h2 id="totalClaims">
+                    0
+                </h2>
+
+                <small>
+                    Total claim requests
+                </small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ===============================
+         QUICK ACTIONS
+    ================================= -->
+
+    <section class="dashboard-section">
+
+        <div class="section-heading">
+
+            <div>
+
+                <h2>
+                    Quick Actions
+                </h2>
+
+                <p>
+                    Manage important system activities
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="quick-actions">
+
+
+            <a
+                href="admin-verification.html"
+                class="action-card"
+            >
+
+                <div class="action-icon">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                </div>
+
+                <div>
+
+                    <h3>
+                        Verify Items
+                    </h3>
+
+                    <p>
+                        Review and verify lost & found reports
+                    </p>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-right arrow"></i>
+
+            </a>
+
+
+
+            <a
+                href="admin-claims.html"
+                class="action-card"
+            >
+
+                <div class="action-icon">
+
+                    <i class="fa-solid fa-file-circle-check"></i>
+
+                </div>
+
+                <div>
+
+                    <h3>
+                        Manage Claims
+                    </h3>
+
+                    <p>
+                        Review and process claim requests
+                    </p>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-right arrow"></i>
+
+            </a>
+
+
+
+            <a
+                href="#"
+                class="action-card"
+            >
+
+                <div class="action-icon">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </div>
+
+                <div>
+
+                    <h3>
+                        Manage Users
+                    </h3>
+
+                    <p>
+                        View registered campus users
+                    </p>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-right arrow"></i>
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ===============================
+         SYSTEM INFO
+    ================================= -->
+
+    <section class="system-info">
+
+        <div class="info-icon">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+        </div>
+
+        <div>
+
+            <h3>
+                Admin Control Center
+            </h3>
+
+            <p>
+                From here you can verify reported items,
+                manage claim requests and monitor the
+                Lost & Found system.
+            </p>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- Admin JavaScript -->
+
+<script
+    type="module"
+    src="js/admin.js"
+></script>
+
+
+</body>
+
+</html>

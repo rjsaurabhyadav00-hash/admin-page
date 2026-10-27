@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Items Verification - Admin Panel</title>
+
+<link rel="stylesheet" href="css/admin-verification.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+```
+
+</head>
+
+<body>
+
+```
+<!-- ================= SIDEBAR ================= -->
+
+<div class="sidebar">
+
+    <div class="sidebar-logo">
+        <i class="fa-solid fa-shield-halved"></i>
+        <h2>Admin Panel</h2>
+    </div>
+
+    <div class="sidebar-menu">
+
+        <a href="admin.html">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>Dashboard</span>
+        </a>
+
+        <a href="admin-verification.html" class="active">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>Items Verification</span>
+        </a>
+
+        <a href="admin-claims.html">
+            <i class="fa-solid fa-hand-holding-heart"></i>
+            <span>Claim Requests</span>
+        </a>
+
+        <a href="admin-users.html">
+            <i class="fa-solid fa-users"></i>
+            <span>Users</span>
+        </a>
+
+        <a href="admin-analytics.html">
+            <i class="fa-solid fa-chart-pie"></i>
+            <span>Analytics</span>
+        </a>
+
+    </div>
+
+    <div class="sidebar-bottom">
+
+        <a href="login.html" class="logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- ================= MAIN ================= -->
+
+<div class="main">
+
+    <!-- TOP HEADER -->
+
+    <div class="topbar">
+
+        <div>
+            <h1>Items Verification</h1>
+            <p>Review and verify lost & found item reports</p>
+        </div>
+
+        <div class="admin-profile">
+
+            <div class="admin-avatar">
+                <i class="fa-solid fa-user-shield"></i>
+            </div>
+
+            <div>
+                <strong>Admin</strong>
+                <span>Administrator</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= INFO CARDS ================= -->
+
+    <div class="stats">
+
+        <div class="stat-card">
+
+            <div class="stat-icon pending-icon">
+                <i class="fa-solid fa-clock"></i>
+            </div>
+
+            <div>
+                <span>Pending Verification</span>
+                <h2 id="pendingCount">0</h2>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon verified-icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+
+            <div>
+                <span>Verified Items</span>
+                <h2 id="verifiedCount">0</h2>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon rejected-icon">
+                <i class="fa-solid fa-circle-xmark"></i>
+            </div>
+
+            <div>
+                <span>Rejected Items</span>
+                <h2 id="rejectedCount">0</h2>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon total-icon">
+                <i class="fa-solid fa-box-open"></i>
+            </div>
+
+            <div>
+                <span>Total Reports</span>
+                <h2 id="totalCount">0</h2>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= TABLE ================= -->
+
+    <div class="table-section">
+
+        <div class="section-header">
+
+            <div>
+                <h2>Item Reports</h2>
+                <p>Verify or reject submitted item reports</p>
+            </div>
+
+            <div class="report-badge">
+                <i class="fa-solid fa-list"></i>
+                All Reports
+            </div>
+
+        </div>
+
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Photo</th>
+                        <th>Item</th>
+                        <th>Category</th>
+                        <th>Location</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="itemTable">
+
+                    <!-- JavaScript will load items here -->
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= INFO ================= -->
+
+    <div class="info-box">
+
+        <div class="info-icon">
+            <i class="fa-solid fa-circle-info"></i>
+        </div>
+
+        <div>
+            <h3>Verification Guidelines</h3>
+
+            <p>
+                Check the submitted item details before verifying.
+                Verified items will become available in the system,
+                while rejected reports will not be displayed as verified.
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        © 2026 Smart Campus Lost & Found Management System
+    </footer>
+
+</div>
+
+
+<!-- Existing JavaScript - DO NOT CHANGE -->
+
+<script type="module" src="js/admin-verification.js"></script>
+```
+
+</body>
+
+</html>
